@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { HeaderComponent } from "./Header.componete";
+import { RouterModule } from "@angular/router";
 
 
 
@@ -7,7 +8,9 @@ import { HeaderComponent } from "./Header.componete";
     declarations: [
         HeaderComponent
     ],
-    imports: [],
+    imports: [
+        RouterModule
+    ],
     exports: [
         HeaderComponent
     ],
