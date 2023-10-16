@@ -1,3 +1,54 @@
 <h1>Aplicação</h1>
 <app-header></app-header>
+
 <router-outlet></router-outlet>
+
+<div *ngIf="clientePremio; else naopremio">
+
+    <h1>Voce é um client premio tem acesso a infromação</h1>
+    
+</div>
+
+<ng-template #naopremio>
+ <h1>Nao é premio</h1>
+</ng-template>
+
+<ul *ngFor="let valor of valores">
+    <li>{{valor.id}} {{ valor.nome }} - {{ valor.descricao }}</li>
+</ul>
+
+<label for="descricao">Digite a desclição</label>
+<br>
+<input type="text" name="descricao" [value]="discricao1">
+<input type="text" name="descricao" [(ngModel)]="discricao1">
+
+<br>
+<br>
+
+<!-- <label>Nome</label>
+<input[(ngModel)]="valor.nome">
+<br>
+<label>Descrição</label>
+<input[(ngModel)]="valor.descricao"> -->
+
+
+
+
+
+
+
+<br>
+<br>
+
+<label>id</label>
+<input [(ngModel)]="id">
+<br>
+
+<label>Nome</label>
+<input [(ngModel)]="nome">
+<br>
+<label>Descricao</label>
+<input [(ngModel)]="descricao">
+
+<br>
+<button (click)="adicionar()">Adicionar</button>
